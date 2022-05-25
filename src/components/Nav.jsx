@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { MoonStars, Sun, BookOpen, ShoppingCart } from "phosphor-react";
+import { MoonStars, Sun, BookOpen, ShoppingCart, GithubLogo } from "phosphor-react";
 
 function Nav() {
 	const [theme, setTheme] = useState(localStorage.getItem("theme") || "dark");
@@ -32,6 +32,9 @@ function Nav() {
 				) : (
 					<MoonStars size={20} weight="duotone" />
 				)}
+			</div>
+			<div className="theme-button-right">
+				<GithubLogo size={20} weight="duotone" />
 			</div>
 
 			<nav>
