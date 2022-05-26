@@ -1,5 +1,5 @@
 import { React, useState } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { MoonStars, Sun, BookOpen, ShoppingCart, GithubLogo } from "phosphor-react";
 
 function Nav() {
@@ -34,22 +34,22 @@ function Nav() {
 
 				<ul className="nav-links">
 					<li>
-						<Link to={"/"}>Home</Link>
+						<Link to="/">Home</Link>
 					</li>
 					<li>
-						<a href="#">About</a>
-					</li>
-					<li>
-						<a href="#">Contact</a>
+						<Link to="/about">About</Link>
 					</li>
 				</ul>
-				<div className="nav-cart">
-					<ShoppingCart
-						weight="duotone"
-						size={24}
-						color={theme === "light" ? "var(--white)" : "var(--teal)"}
-					/>
-					<a href="#">$100.00</a>
+
+				<div className="nav-cart flex">
+					<Link to="/cart">
+						<ShoppingCart
+							weight="duotone"
+							size={24}
+							color={theme === "light" ? "var(--white)" : "var(--teal)"}
+						/>
+					</Link>
+					<Link to="/cart">$100.00</Link>
 				</div>
 			</nav>
 		</>

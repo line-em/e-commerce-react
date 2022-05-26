@@ -1,12 +1,11 @@
 import Nav from "./components/Nav";
 import HeroFeature from "./components/HeroFeature";
 import BookCard from "./components/BookCard";
-import About from "./pages/About";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { BookOpen } from "phosphor-react";
 import { featureBooks } from "./data/historicalMysteriesBooks";
 import { featureText, goodReadsText } from "./data/heroContent";
 import { goodReadsBooks } from "./data/goodReads";
+import { Outlet } from "react-router-dom";
 import "./Helpers/css-reset.css";
 
 function App() {
@@ -32,15 +31,9 @@ function App() {
 				<div id="progress-bar"></div>
 			</div>
 
-			<BrowserRouter>
-				<Nav />
-				<Routes>
-					<Route path="/" element={<App />} />
-					<Route path="/about" element={<About />} />
-					{/* <Route path="/cart" element={<Cart />} /> */}
-				</Routes>
-			</BrowserRouter>
 			<main>
+				<Nav />
+				<Outlet />
 				<section className="hero-wrapper">
 					<div className="flex hero-content">
 						<BookOpen weight="duotone" color="var(--white)" size={48} />
