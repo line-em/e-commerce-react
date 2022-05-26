@@ -1,11 +1,3 @@
-export const blogContent = [
-	{
-		title: "Featured - Newly Released Historical Mysteries",
-		blurb: "For the reader who enjoys a spot of amateur sleuthing, historical whodunits offer the particular pleasure of combining suspense with the peculiarities of a certain time period. Meanwhile, authors get to sidestep pesky plot-busting details—like, oh, say, the internet. Now that's a win-win all around!",
-		url: `https://www.goodreads.com/blog/show/2343-discover-timely-thrills-with-these-42-new-historical-mysteries?int=Soapbox_Signed_Out_2022_May&int_sub=Blog_2343`
-	}
-];
-
 export const books = [
 	{
 		id: 1,
@@ -128,5 +120,21 @@ export const books = [
 
 		Joined by enigmatic Alexander Ashton, a fellow researcher, Saffron uses her knowledge of botany as she explores steamy greenhouses, dark gardens, and deadly poisons. Will she be able to uncover the truth or will her investigation land her on the murderer’s list? 
 		`
+	},
+	{
+		id: 8,
+		title: `Secret Identity`,
+		author: `Alex Segura`,
+		price: `$14.99`,
+		tags: [`kindle`, `paperback`],
+		image: `https://i.gr-assets.com/images/S/compressed.photo.goodreads.com/books/1625695428l/57693604._SY475_.jpg`,
+		info: `https://www.goodreads.com/book/show/57693604-secret-identity`,
+		description: `From Anthony Award-winning writer Alex Segura comes Secret Identity, a rollicking literary mystery set in the world of comic books.
+
+		It’s 1975 and the comic book industry is struggling, but Carmen Valdez doesn’t care. She’s an assistant at Triumph Comics, which doesn’t have the creative zeal of Marvel nor the buttoned-up efficiency of DC, but it doesn’t matter. Carmen is tantalizingly close to fulfilling her dream of writing a superhero book.
+
+		That dream is nearly a reality when one of the Triumph writers enlists her help to create a new character, which they call “The Lethal Lynx,” Triumph's first female hero. But her colleague is acting strangely and asking to keep her involvement a secret. And then he’s found dead, with all of their scripts turned into the publisher without her name. Carmen is desperate to piece together what happened to him, to hang on to her piece of the Lynx, which turns out to be a runaway hit. But that’s complicated by a surprise visitor from her home in Miami, a tenacious cop who is piecing everything together too quickly for Carmen, and the tangled web of secrets and resentments among the passionate eccentrics who write comics for a living.
+
+		Alex Segura uses his expertise as a comics creator as well as his unabashed love of noir fiction to create a truly one-of-a-kind novel--hard-edged and bright-eyed, gritty and dangerous, and utterly absorbing. `
 	}
 ];

@@ -12,7 +12,7 @@ function BookCard(props) {
 
 	return (
 		<article className="featured-content">
-			<div className="taglist">{renderTags}</div>
+			<div className="taglist widescreen">{renderTags}</div>
 			<div className="featured-book-cover">
 				<img src={props.image} alt={props.title} />
 			</div>
@@ -25,7 +25,9 @@ function BookCard(props) {
 					[Read More...]
 				</a>
 			</div>
+
 			<hr />
+			<div className="smallscreen taglist">{renderTags}</div>
 			<div className="featured-content-price">
 				<h3 className="price">{props.price}</h3>
 				<button>Add to Cart</button>
