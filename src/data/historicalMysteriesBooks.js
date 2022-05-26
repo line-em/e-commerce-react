@@ -1,6 +1,6 @@
-export const books = [
+export const featureBooks = [
 	{
-		id: 1,
+		id: "1",
 		title: `The Christie Affair`,
 		author: `Nina de Gramont`,
 		price: `$14.99`,
@@ -16,7 +16,7 @@ export const books = [
         What drives someone to murder? What will someone do in the name of love? What kind of crime can someone never forgive? Nina de Gramont’s brilliant, unforgettable novel explores these questions and more.`
 	},
 	{
-		id: 2,
+		id: "2",
 		title: `Beauiful Little Fools`,
 		author: `Jillian Cantor`,
 		price: `$11.99`,
@@ -40,7 +40,7 @@ export const books = [
         Jillian Cantor revisits the glittering Jazz Age world of F. Scott Fitzgerald’s The Great Gatsby, retelling this timeless American classic from the women’s perspective. Beautiful Little Fools is a quintessential tale of money and power, marriage and friendship, love and desire, and ultimately the murder of a man tormented by the past and driven by a destructive longing that can never be fulfilled.`
 	},
 	{
-		id: 3,
+		id: "3",
 		title: `Woman on Fire`,
 		author: `Lisa Barr`,
 		price: `$11.99`,
@@ -56,7 +56,7 @@ export const books = [
         A thrilling tale of secrets, love, and sacrifice that illuminates the destructive cruelty of war and greed and the triumphant power of beauty and love, Woman on Fire tells the story of a remarkable woman and an exquisite work of art that burns bright, moving through hands, hearts, and history.`
 	},
 	{
-		id: 4,
+		id: "4",
 		title: `Harlem Sunset`,
 		author: `Nekesa Afia`,
 		price: `$11.99`,
@@ -72,7 +72,7 @@ export const books = [
 	With Rosa Maria's freedom on the line, Louise must get to the bottom of Nora's death before time runs out. `
 	},
 	{
-		id: 5,
+		id: "5",
 		title: "Razzmatazz",
 		author: "Christopher Moore",
 		price: `No Stock`,
@@ -88,7 +88,7 @@ export const books = [
 		Strap yourselves in for a bit of the old razzmatazz, ladies and gentlemen. It's Christopher Moore time.`
 	},
 	{
-		id: 6,
+		id: "6",
 		title: "Marion Lane and the Deadly Rose",
 		author: " T.A. Willberg",
 		price: `$11.99`,
@@ -105,7 +105,7 @@ export const books = [
 		`
 	},
 	{
-		id: 7,
+		id: "7",
 		title: "A Botanist's Guide to Parties and Poisons ",
 		author: " Kate Khavari",
 		price: `$13.99`,
@@ -122,7 +122,7 @@ export const books = [
 		`
 	},
 	{
-		id: 8,
+		id: "8",
 		title: `Secret Identity`,
 		author: `Alex Segura`,
 		price: `$14.99`,

@@ -15,3 +15,14 @@ export const aboutMe = [
 		url: "https://github.com/line-em"
 	}
 ];
+
+export const goodReadsText = [
+	{
+		id: "goodReadsText",
+		title: "Goodreads",
+		blurb: `With more than 4.75 million votes cast and counted, the 13th Annual Goodreads Choice Awards are now official. Launched in 2009, the GCAs honor the year’s best books as decided by you, the readers.
+
+		Several tight races came down to the wire this year, playing out in the final days of the tally. The closest call was the Romance category, where People We Meet on Vacation narrowly took top honors over the also-beloved The Love Hypothesis. Similarly, perennial favorite Rick Riordan won Best Middle Grade & Children's book (for Daughter of the Deep), followed closely by Victoria Schwab’s Bridge of Souls. This makes Riordan the most decorated author in Goodreads Choice Awards history, with 11 wins.`,
+		url: `https://www.goodreads.com/choiceawards/best-books-2021`
+	}
+];

@@ -4,7 +4,7 @@ import { Bookmark } from "phosphor-react";
 function BookCard(props) {
 	const renderTags = props.tags.map((tag) => (
 		<>
-			<span key={tag} className="tag">
+			<span key={`${tag}+${props.id}`} className="tag">
 				{tag}
 			</span>
 		</>
@@ -20,6 +20,7 @@ function BookCard(props) {
 			<div className="featured-content-info">
 				<h3>{props.title}</h3>
 				<h4>{props.author}</h4>
+				{props.award && <b>{props.award}</b>}
 				<p>{props.description}</p>
 				<a href={props.info} target="_blank" rel="noopener noreferrer">
 					[Read More...]

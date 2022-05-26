@@ -1,4 +1,5 @@
 import { React, useState } from "react";
+import { Link, NavLink } from "react-router-dom";
 import { MoonStars, Sun, BookOpen, ShoppingCart, GithubLogo } from "phosphor-react";
 
 function Nav() {
@@ -9,23 +10,8 @@ function Nav() {
 		localStorage.setItem("theme", theme);
 		document.querySelector("html").setAttribute("data-theme", theme);
 	};
-
-	const progressBar = () => {
-		const scroll = document.body.scrollTop || document.documentElement.scrollTop;
-		const windowHeight =
-			document.documentElement.scrollHeight - document.documentElement.clientHeight;
-		const scrolled = (scroll / windowHeight) * 100;
-		document.getElementById("progress-bar").style.width = `${scrolled}%`;
-	};
-
-	window.onscroll = progressBar;
-
 	return (
 		<>
-			<div className="progress-container">
-				<div id="progress-bar"></div>
-			</div>
-
 			<div className="theme-button" onClick={toggleTheme}>
 				{theme === "light" ? (
 					<Sun size={20} weight="duotone" />
@@ -48,7 +34,7 @@ function Nav() {
 
 				<ul className="nav-links">
 					<li>
-						<a href="#">Home</a>
+						<Link to={"/"}>Home</Link>
 					</li>
 					<li>
 						<a href="#">About</a>
