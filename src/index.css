@@ -197,7 +197,8 @@ li + li {
 
 /* Book items */
 
-.featured-items {
+.featured-items,
+.cart-items {
 	grid-column: 2 / 5;
 	display: grid;
 	grid-template-columns: repeat(auto-fit, minmax(280px, auto));
@@ -250,6 +251,15 @@ li + li {
 	font-size: var(--font-size-xs);
 }
 
+.featured-content-price {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	gap: var(--font-size-deco-lg);
+	flex-wrap: wrap;
+	margin-bottom: var(--spacing-0);
+}
+
 /* taglist */
 
 .smallscreen * {
@@ -293,15 +303,6 @@ li + li {
 
 .theme-button-right {
 	right: var(--spacing-0);
-}
-
-.featured-content-price {
-	display: flex;
-	justify-content: space-around;
-	align-items: center;
-	gap: var(--font-size-deco-lg);
-	flex-wrap: wrap;
-	margin-bottom: var(--spacing-0);
 }
 
 .featured-content-price > button {
