@@ -22,6 +22,9 @@ function App() {
 			<main>
 				<Nav />
 				<Outlet />
+				<footer>
+					<p>&copy; {new Date().getFullYear()} Bookstore. All rights reserved.</p>
+				</footer>
 			</main>
 		</>
 	);

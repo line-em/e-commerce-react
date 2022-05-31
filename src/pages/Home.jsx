@@ -26,9 +26,6 @@ function Home() {
 			<section className="featured-items">{featureCards}</section>
 			<section className="hero-wrapper">{goodReadsHero}</section>
 			<section className="featured-items">{goodReadsCards}</section>
-			<footer>
-				<p>&copy; {new Date().getFullYear()} Bookstore. All rights reserved.</p>
-			</footer>
 		</>
 	);
 }
