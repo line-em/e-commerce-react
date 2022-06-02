@@ -1,5 +1,6 @@
-import React from "react";
-import { Bookmark } from "phosphor-react";
+import React, { useContext } from "react";
+import { Link } from "react-router-dom";
+import { CartContext } from "../context/CartContext";
 
 function BookCard(props) {
 	const renderTags = props.tags.map((tag) => (
@@ -9,6 +10,10 @@ function BookCard(props) {
 			</span>
 		</>
 	));
+
+	const { addToCart, increase, cartItems, sumItems, itemCount } = useContext(CartContext);
+
+	const isInCart = cartItems.find((item) => item.id === props.id);
 
 	return (
 		<article className="featured-content">
@@ -31,7 +36,8 @@ function BookCard(props) {
 			<div className="smallscreen taglist">{renderTags}</div>
 			<div className="featured-content-price">
 				<h3 className="price">{props.price}</h3>
-				<button>Add to Cart</button>
+				<button onClick={() => addToCart(props)}>Add to Cart</button>
+				{/* FIXME: Add conditional, if it's in cart, delete/increase/decrease */}
 			</div>
 		</article>
 	);

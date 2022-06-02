@@ -33,6 +33,7 @@ function Cart() {
 						<button>+</button>
 						<h4>1</h4>
 						<button>-</button>
+						{/* FIXME: Delete button */}
 					</div>
 				</article>
 			</section>
