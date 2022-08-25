@@ -6,11 +6,11 @@ import Home from "./pages/Home";
 import Cart from "./pages/Cart";
 import "./index.css";
 import CartState from "./Context/Cart/CartState";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
 	<CartState>
-		<BrowserRouter>
+		<HashRouter>
 			<Routes>
 				<Route path="/" element={<App />}>
 					<Route element={<Home />} index />
@@ -18,6 +18,6 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 					<Route path="/cart" element={<Cart />} />
 				</Route>
 			</Routes>
-		</BrowserRouter>
+		</HashRouter>
 	</CartState>
 );
