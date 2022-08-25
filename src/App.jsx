@@ -1,6 +1,5 @@
 import Nav from "./components/Nav";
 import { Outlet } from "react-router-dom";
-import "./Helpers/css-reset.css";
 
 function App() {
 	const progressBar = () => {

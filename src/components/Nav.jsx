@@ -1,4 +1,4 @@
-import { React, useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { MoonStars, Sun, BookOpen, ShoppingCart, GithubLogo } from "phosphor-react";
 

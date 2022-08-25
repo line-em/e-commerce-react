@@ -1,5 +1,3 @@
-import React from "react";
-
 function HeroFeature(props) {
 	return (
 		<section className="hero-content">

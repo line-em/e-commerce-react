@@ -1,4 +1,4 @@
-import { ADD_TO_CART, INCREASE, DECREASE, REMOVE_ITEM, CLEAR, CHECKOUT } from "./CartTypes";
+// import { ADD_TO_CART, INCREASE, DECREASE, REMOVE_ITEM, CLEAR, CHECKOUT } from "./CartTypes";
 
 export const sumItems = (cartItems) => {
 	Storage(cartItems);

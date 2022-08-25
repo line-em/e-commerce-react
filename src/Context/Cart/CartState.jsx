@@ -1,56 +1,76 @@
 import { useReducer } from "react";
-import CartContext from "./CartContext";
-import CartReducer from "./CartReducer";
+// import CartContext from "./CartContext";
+// import CartReducer from "./CartReducer";
 import { sumItems } from "./CartReducer";
+import { createContext } from "react";
+import { useState } from "react";
+import { goodReadsBooks } from "../../data/goodReads";
+import { featureBooks } from "../../data/historicalMysteriesBooks";
 
-const CartState = ({ children }) => {
-	const initalState = {
-		cartItems: [],
-		checkout: false
+const CartContext = createContext();
+
+const CartContextProvider = ({ children }) => {
+	const [itemsInCart, setItemsInCart] = useState([]);
+	const allItems = goodReadsBooks.concat(featureBooks);
+
+	const addToCart = (currentBook) => {
+		setItemsInCart(allItems.map((book) => {}));
 	};
+	const removeFromCart = "oi";
+	const increaseItem = "oi";
+	const decreaseItem = "oi";
+	const checkout = "oi";
 
-	const [state, dispatch] = useReducer(CartReducer, initalState);
+	const totalPrice = "oi";
 
-	const addToCart = (payload) => {
-		dispatch({ type: "ADD_TO_CART", payload });
-	};
+	// const initalState = {
+	// 	cartItems: [],
+	// 	checkout: false
+	// };
 
-	const increase = (payload) => {
-		dispatch({ type: "INCREASE", payload });
-	};
+	// const [state, dispatch] = useReducer(CartReducer, initalState);
 
-	const decrease = (payload) => {
-		dispatch({ type: "DECREASE", payload });
-	};
+	// const addToCart = (payload) => {
+	// 	dispatch({ type: "ADD_TO_CART", payload });
+	// };
 
-	const removeFromCart = (payload) => {
-		dispatch({ type: "REMOVE_ITEM", payload });
-	};
+	// const increase = (payload) => {
+	// 	dispatch({ type: "INCREASE", payload });
+	// };
 
-	const clearCart = () => {
-		dispatch({ type: "CLEAR" });
-	};
+	// const decrease = (payload) => {
+	// 	dispatch({ type: "DECREASE", payload });
+	// };
 
-	const handleCheckout = () => {
-		dispatch({ type: "CHECKOUT" });
-	};
+	// const removeFromCart = (payload) => {
+	// 	dispatch({ type: "REMOVE_ITEM", payload });
+	// };
+
+	// const clearCart = () => {
+	// 	dispatch({ type: "CLEAR" });
+	// };
+
+	// const handleCheckout = () => {
+	// 	dispatch({ type: "CHECKOUT" });
+	// };
 
 	return (
 		<CartContext.Provider
 			value={{
-				cartItems: state.cartItems,
-				showCart: state.showCart,
-				addToCart,
-				removeFromCart,
-				increase,
-				decrease,
-				clearCart,
-				handleCheckout,
-				...state
+				addToCart
+				// cartItems: state.cartItems,
+				// showCart: state.showCart,
+				// addToCart,
+				// removeFromCart,
+				// increase,
+				// decrease,
+				// clearCart,
+				// handleCheckout,
+				// ...state
 			}}
 		>
 			{children}
 		</CartContext.Provider>
 	);
 };
-export default CartState;
+export { CartContext, CartContextProvider };

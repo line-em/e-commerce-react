@@ -1,4 +1,3 @@
-import React from "react";
 import HeroFeature from "../components/HeroFeature";
 import { ItemDetails } from "../components/ItemDetails";
 

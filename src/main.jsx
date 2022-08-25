@@ -1,15 +1,15 @@
-import React from "react";
 import ReactDOM from "react-dom/client";
 import App from "./App";
 import About from "./pages/About";
 import Home from "./pages/Home";
 import Cart from "./pages/Cart";
+import "./Helpers/css-reset.css";
 import "./index.css";
-import CartState from "./Context/Cart/CartState";
+import { CartContextProvider } from "./Context/Cart/CartState";
 import { HashRouter, Routes, Route } from "react-router-dom";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
-	<CartState>
+	<CartContextProvider>
 		<HashRouter>
 			<Routes>
 				<Route path="/" element={<App />}>
@@ -19,5 +19,5 @@ ReactDOM.createRoot(document.getElementById("root")).render(
 				</Route>
 			</Routes>
 		</HashRouter>
-	</CartState>
+	</CartContextProvider>
 );
