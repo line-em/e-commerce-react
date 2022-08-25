@@ -1,9 +1,4 @@
-import { useReducer } from "react";
-// import CartContext from "./CartContext";
-// import CartReducer from "./CartReducer";
-import { sumItems } from "./CartReducer";
-import { createContext } from "react";
-import { useState } from "react";
+import { createContext, useState } from "react";
 import { goodReadsBooks } from "../../data/goodReads";
 import { featureBooks } from "../../data/historicalMysteriesBooks";
 
@@ -59,6 +54,7 @@ const CartContextProvider = ({ children }) => {
 	return (
 		<CartContext.Provider
 			value={{
+				itemsInCart,
 				manageCart,
 				manageQntd,
 				checkout,
