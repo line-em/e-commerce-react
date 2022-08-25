@@ -1,14 +1,13 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { ItemDetails } from "./ItemDetails";
 // import { CartContext } from "../Context/CartContext";
 
 function BookCard(props) {
 	const renderTags = props.tags.map((tag) => (
-		<>
-			<span key={`${tag}+${props.id}`} className="tag">
-				{tag}
-			</span>
-		</>
+		<span key={`${tag}+${props.id}`} className="tag">
+			{tag}
+		</span>
 	));
 
 	// const { addToCart, increase, cartItems, sumItems, itemCount } = useContext(CartContext);
@@ -36,19 +35,7 @@ function BookCard(props) {
 			<div className="smallscreen taglist">{renderTags}</div>
 			<div className="featured-content-price">
 				<h3 className="price">{props.price}</h3>
-				<div className="flex flow">
-					<div>
-						<button className="btn btn-primary">Remove</button>
-					</div>
-					<div className="flex-row">
-						<button className="btn btn-slim">+</button>
-						<h4>5</h4>
-						<button className="btn btn-slim">-</button>
-					</div>
-				</div>
-				{/* <button  className="btn btn-primary">Add to Cart</button> */}
-				{/* onClick={() => addToCart(props)} */}
-				{/* FIXME: Add conditional, if it's in cart, delete/increase/decrease */}
+				<ItemDetails />
 			</div>
 		</article>
 	);

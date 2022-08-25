@@ -1,5 +1,6 @@
 import React from "react";
 import HeroFeature from "../components/HeroFeature";
+import { ItemDetails } from "../components/ItemDetails";
 
 function Cart() {
 	return (
@@ -28,12 +29,10 @@ function Cart() {
 						<h3>Woman on Fire</h3>
 					</div>
 					<hr />
-					<h3 className="price">$14,99</h3>
+
 					<div className="featured-content-price">
-						<button>+</button>
-						<h4>1</h4>
-						<button>-</button>
-						{/* FIXME: Delete button */}
+						<h3 className="price">$14,99</h3>
+						<ItemDetails />
 					</div>
 				</article>
 			</section>
