@@ -8,20 +8,25 @@ const CartContextProvider = ({ children }) => {
 	const [itemsInCart, setItemsInCart] = useState([]);
 	const allItems = goodReadsBooks.concat(featureBooks);
 
-	console.log("allItems " + allItems);
+	console.log(allItems);
 
 	const manageCart = (currentBookId, actionType = "add") => {
-		let updatedItems = allItems.map((book) => {
+		let updatedItems = allItems.map((book) =>
 			currentBookId === book.id
 				? {
 						...book,
 						cart: (actionType === "add" && true) || (actionType === "remove" && false),
 						qntd: (actionType === "add" && 1) || (actionType === "remove" && 0)
 				  }
-				: book;
-		});
-		console.log("updatedItems manageCart" + updatedItems);
-		return setItemsInCart(updatedItems.filter((book) => book.cart));
+				: book
+		);
+		// 	console.log(
+		// 	"currentBook e bookId iguais?" +
+		// 		currentBookId +
+		// 		book.id +
+		// 		(currentBookId === book.id)
+		// );
+		// setItemsInCart(updatedItems.filter((book) => book.cart));
 	};
 
 	const manageQntd = (currentBookId, actionType = "increase") => {
@@ -34,7 +39,7 @@ const CartContextProvider = ({ children }) => {
 				: book;
 		});
 
-		console.log("updatedItems manageQntd" + updatedItems);
+		console.log(updatedItems);
 
 		const updateQntd = (id, qntd, action) => {
 			if (qntd === 0) {
@@ -42,7 +47,7 @@ const CartContextProvider = ({ children }) => {
 			}
 			action === "increase" ? qntd++ : qntd--;
 		};
-
+		console.log(updatedItems);
 		return setItemsInCart(updatedItems.filter((book) => book.cart));
 	};
 

@@ -1,7 +1,4 @@
-import { useContext } from "react";
-import { Link } from "react-router-dom";
 import { ItemDetails } from "./ItemDetails";
-// import { CartContext } from "../Context/CartState";
 
 function BookCard(props) {
 	const renderTags = props.tags.map((tag) => (
@@ -9,10 +6,6 @@ function BookCard(props) {
 			{tag}
 		</span>
 	));
-
-	// const { addToCart, increase, cartItems, sumItems, itemCount } = useContext(CartContext);
-
-	// const isInCart = (product) => cartItems.find((item) => item.id === props.id);
 
 	return (
 		<article className="featured-content">
@@ -35,7 +28,7 @@ function BookCard(props) {
 			<div className="smallscreen taglist">{renderTags}</div>
 			<div className="featured-content-price">
 				<h3 className="price">$ {props.price}</h3>
-				<ItemDetails />
+				<ItemDetails id={props.id} qntd={props.qntd} />
 			</div>
 		</article>
 	);
